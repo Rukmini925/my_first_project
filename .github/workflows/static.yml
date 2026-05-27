@@ -1,0 +1,17 @@
+name: Student Calculator Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Show Success Message
+        run: echo "Student Calculator Project is Working!"
