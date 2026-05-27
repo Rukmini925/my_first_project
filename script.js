@@ -8,9 +8,21 @@ function calculateMarks() {
 
     let total = m1 + m2 + m3;
     let average = total / 3;
+    let grade = "";
+
+if (average >= 90) {
+    grade = "A";
+}
+else if (average >= 75) {
+    grade = "B";
+}
+else {
+    grade = "C";
+}
 
     document.getElementById("result").innerHTML =
         "Student: " + name +
         "<br>Total Marks: " + total +
-        "<br>Average: " + average.toFixed(2);
+        "<br>Average: " + average.toFixed(2) +
+        "<br>Grade: " + grade;
 }
